@@ -1,7 +1,9 @@
 services:
-  db:
+  mydatabase-mongodb:
     image: mongo
   app:
     build: ./
     ports:
       - "5001:5000"
+    depends_on:
+      - mydatabase-mongodb
