@@ -1,0 +1,7 @@
+services:
+  db:
+    image: mongo
+  app:
+    build: ./
+    ports:
+      - "5001:5000"

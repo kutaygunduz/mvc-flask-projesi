@@ -8,7 +8,6 @@ CORS(app)
 todo = todo.Todo()
 
 
-# todo routes
 @app.route('/todos/', methods=['GET'])
 def get_tasks():
     return jsonify(todo.find({})), 200
@@ -45,4 +44,4 @@ def delete_tasks(todo_id):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)
