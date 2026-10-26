@@ -14,7 +14,7 @@ jobs:
         run: docker compose up -d --build
       
 
-      - name: asd
+      - name: test
         run: |
           sleep 10
           curl -v -f http://localhost:5001/todos/
